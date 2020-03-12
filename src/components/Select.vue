@@ -1040,6 +1040,7 @@
               'type': 'search',
               'autocomplete': this.autocomplete,
               'value': this.search,
+              'autocapitalize': 'none',
             },
             events: {
               'compositionstart': () => this.isComposing = true,
