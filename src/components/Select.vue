@@ -1155,7 +1155,7 @@
 
         if (this.search.length === 0) { 
           this.open = false;
-          this.searchEl().focus();
+          this.$refs.search.focus();
         }
 
         return options
