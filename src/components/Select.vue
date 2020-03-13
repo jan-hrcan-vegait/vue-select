@@ -1141,6 +1141,9 @@
        * @return {array}
        */
       filteredOptions() {
+        this.search = this.search.toLowerCase();
+        console.log(`Lowercased search: ${this.search}`);
+
         const optionList = [].concat(this.optionList);
 
         if (!this.filterable && !this.taggable) {
