@@ -900,6 +900,8 @@
       onSearchFocus() {
         this.open = true
         this.$emit('search:focus')
+        console.log('FIELD IS FOCUSED!');
+        window.body
       },
 
       /**
@@ -1039,8 +1041,7 @@
               'ref': 'search',
               'type': 'search',
               'autocomplete': this.autocomplete,
-              'value': this.search,
-              'onfocus': console.log("FIELD FOCUSED!")
+              'value': this.search
             },
             events: {
               'compositionstart': () => this.isComposing = true,
@@ -1153,6 +1154,8 @@
         if (this.taggable && this.search.length && !this.optionExists(this.createOption(this.search))) {
           options.unshift(this.search)
         }
+
+        if (this.search.length === 0) this.toggleDropdown();
 
         return options
       },
