@@ -1048,7 +1048,7 @@
               'keydown': this.onSearchKeyDown,
               'blur': this.onSearchBlur,
               'focus': this.onSearchFocus,
-              'input': (e) => this.search = e.target.value,
+              'input': (e) => this.search = e.target.value.toLowerCase(),
             },
           },
           spinner: {
