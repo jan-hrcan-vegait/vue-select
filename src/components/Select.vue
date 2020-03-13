@@ -1155,7 +1155,7 @@
           options.unshift(this.search)
         }
 
-        if (this.search.length === 0) this.methods.onEscape();
+        if (this.search.length === 0) this.onEscape();
 
         return options
       },
