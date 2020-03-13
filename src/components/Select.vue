@@ -1141,9 +1141,6 @@
        * @return {array}
        */
       filteredOptions() {
-        this.search = this.search.toLowerCase();
-        console.log(`Lowercased search: ${this.search}`);
-
         const optionList = [].concat(this.optionList);
         console.log(`Options list: ${optionList}`);
 
@@ -1151,7 +1148,7 @@
           return optionList;
         }
 
-        let options = this.search.length > 0 ? this.filter(optionList, this.search, this) : optionList;
+        let options = this.search.length > 0 ? this.filter(optionList, this.search.toLowerCase(), this) : optionList;
         if (this.taggable && this.search.length && !this.optionExists(this.createOption(this.search))) {
           options.unshift(this.search)
         }
