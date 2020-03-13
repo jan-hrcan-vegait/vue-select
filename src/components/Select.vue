@@ -1155,7 +1155,10 @@
           options.unshift(this.search)
         }
 
-        if (this.search.length === 0) this.open = false;
+        if (this.search.length === 0) { 
+          this.open = false;
+          this.searchEl.focus();
+        }
 
         return options
       },
