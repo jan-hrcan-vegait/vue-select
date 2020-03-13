@@ -1039,7 +1039,8 @@
               'ref': 'search',
               'type': 'search',
               'autocomplete': this.autocomplete,
-              'value': this.search
+              'value': this.search,
+              'onfocus': console.log("FIELD FOCUSED!")
             },
             events: {
               'compositionstart': () => this.isComposing = true,
