@@ -900,8 +900,6 @@
       onSearchFocus() {
         this.open = true
         this.$emit('search:focus')
-        console.log('FIELD IS FOCUSED!');
-        window.body
       },
 
       /**
@@ -1157,7 +1155,7 @@
 
         if (this.search.length === 0) { 
           this.open = false;
-          this.searchEl.focus();
+          this.searchEl().focus();
         }
 
         return options
