@@ -25,7 +25,7 @@
         </slot>
 
         <slot name="search" v-bind="scope.search">
-          <input class="vs__search" autocapitalize="none" v-bind="scope.search.attributes" v-on="scope.search.events">
+          <input class="vs__search" v-bind="scope.search.attributes" v-on="scope.search.events">
         </slot>
       </div>
 
