@@ -1155,7 +1155,7 @@
           options.unshift(this.search)
         }
 
-        if (this.search.length === 0) this.toggleDropdown();
+        if (this.search.length === 0) this.open = false;
 
         return options
       },
