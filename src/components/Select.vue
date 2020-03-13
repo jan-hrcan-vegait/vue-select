@@ -1048,7 +1048,7 @@
               'keydown': this.onSearchKeyDown,
               'blur': this.onSearchBlur,
               'focus': this.onSearchFocus,
-              'input': (e) => this.search = e.target.value.toLowerCase(),
+              'input': (e) => this.search = e.target.value,
             },
           },
           spinner: {
@@ -1155,6 +1155,9 @@
         if (this.taggable && this.search.length && !this.optionExists(this.createOption(this.search))) {
           options.unshift(this.search)
         }
+
+
+
         return options
       },
 
